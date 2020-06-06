@@ -1,0 +1,363 @@
+/* Estilo aplicado na página inteira através do atributo <body> */
+/* ESTILOS GLOBAIS */
+body {
+    background: #e6e5e5; /* Cor de fundo */
+    color: #25282b; /* Cor do texto */
+    font-family: 'Montserrat', sans-serif; /* Fonte dos textos */
+    margin: 0; /* Removido a margem dos 4 cantos da tela */
+}
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+.button  {
+    background: #FF5E84; /* Background rosa de fundo */
+    color: white; /* Cor branca do texto */
+    font-size: 14px;
+
+    width: 140px; /*Largura do botão */
+    height: 35px; /* Altura do botão */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px; /* Aredonda os cantos do elemento */
+
+    box-shadow: 0px 8px 16px #FF5E8440; /* Atribui uma sombra ao elemento */
+}
+
+.button:hover {
+    text-decoration: none; /* Remover o underline */
+}
+
+/* Estilo aplicados a todos os links através do atributo <a> */
+a {
+    color: #FF5E84; /* Cor do texto */ 
+    text-decoration: none; /* Removido o underline */
+    font-weight: bold; /* adicionado peso a fonte */
+}
+
+/* Estilo aplicado a todos os links que o mouse passe por cima (hover) */
+a:hover {
+    text-decoration: underline; /* Removido o underline */
+}
+
+/* Estilo aplicado a todos os paragrafos <p> e a classe "description" */
+p {
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 20px; /* Espaço entre as linhas */
+    letter-spacing: 0.1px; /* Espaço entre as letras */
+}
+
+/* Estilo aplicado no box principal através do ID "container" */
+#container {
+    width: 80%; /* largura máxima proporcional a tela */
+    max-width: 980px; /* largura máxima fixa */
+
+    margin: 40px auto; /* Margem superior e inferior 40px, margens latarais automáticas */
+    display: flex; /* Reponsável por fazer os elementos filhos alinharem lado a lado*/
+}
+
+/* Estilo aplicado na sessão com ID "intro"*/
+#intro {
+    width: 300px; /* Tamanho máximo do elemento */
+    margin-right: 64px; /* Tamanho da margem em relação ao segundo elemento (right) */
+}
+
+/* Estilo aplicado ao corpo principal da sessão através do atributo <main> */
+main {
+    margin: 32px 0; /* Margem superior e inferior de 32px, margens laterais de 0px */
+}
+
+/* Estilo aplicado ao elemento pai que contem os elementos filhos botões.*/
+#buttons {
+    display: flex; /* Reponsável por fazer os elementos filhos alinharem lado a lado*/
+    margin-bottom: 16px; /* Margem de 16px em relação ao elemento de baixo*/
+    justify-content: space-evenly; /* Alinhamento dos elementos dentro do display flex */
+}
+
+/* Estilo aplicado aos elementos do tipo <button> */
+button {
+    background: none; /* Sem cor de fundo */
+    color: #FF5E84; /* Cor rosa do texto */
+    border: none; /* Remover borda do elemento */
+    cursor: pointer; /* Tipo do cursor ao passar pelo elemento */
+    outline: none; /* Removido borda automatica ao clicar */
+    
+    font-size: 14px; /* Tamanho da fonte de 14px */ 
+    font-weight: bold; /* Peso da fonte */
+    letter-spacing: 0.2px; /* Distancia entre as letras */
+}
+
+/* Estilo aplicado ao botão quando é passado o mouse por cima (hover) */
+button:hover {
+    text-decoration: underline; /* Aplicado o underline */
+}
+
+
+
+
+/* Estilo aplicado ao elemento de rodapé */
+footer {
+    text-align: center; /* Alinhamento do texto ao centro */
+    
+    font-size: 12px; /*Tamanho do texto */
+    font-weight: 400; /* Peso da fonte */
+    line-height: 18px; /* Espaço entre as linhas */
+    letter-spacing: 0.2px; /* Espaço entre as letras */
+    color: #777; /* Cor do texto */
+}
+
+/* Estilo aplicado ao atributo <a> dentro do rodapé */
+footer a {
+    opacity: 0.8; /* Opacidade do elemento, varia de 0 a 1 */
+}
+
+/* Estilo aplicado ao elemento que forma os boxes de ideias através
+da classe "idea" do atributo <div>
+*/
+.idea {
+    display: flex; /* Alinha os atributos filhos em linha (imagem, div)*/
+    
+    background-color: #FFF; /* cor branco de fundo */
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1) ; /* Sombra do elemento */
+    border-radius: 8px; /* Arredondamento dos cantos do elemento */
+
+    padding: 16px; /* Espaçamento interno */
+
+    margin-bottom: 16px; /* Margem inferior, em relação ao próximo elemento */
+}
+
+/* Estilo aplicado as imagens dentro dos elementos de class "idea" */
+.idea img {
+    width: 40px; /* Largura do elemento */
+    height: 40px; /* Altura do elemento */
+
+    margin-right: 20px; /* Margem em relação ao elemento da direita */
+}
+
+/* Estilo aplicado ao atributo <a3> dentro dos elementos de classe "idea" */
+.idea h3 {
+    margin: 0; /* Removido a margem por que por padrão o atributo trás uma margem Top*/
+}
+
+/* Estilo aplicado ao atributo <p> dentro dos elementos de classe "idea" */
+.idea p {
+    margin: 4px 0; /* Ajustado margem do elemento 4px superior e inferir e 0 para laterais */
+    color: #777; /* Cor cinza do texto */
+}
+
+/* Estilo aplicado ao atributo de classe "description" dentro dos elementos de classe "idea" */
+.idea .description {
+    margin: 8px 0; /* Margem suerior e inferior de 8px e 0 para laterais */
+
+    font-size: 12px; /* Tamanho da fonte */
+    line-height: 16px; /* Espaço entre as linhas */
+    letter-spacing: 0.1px; /* Espaço entre as letras */
+}
+
+/* Estilo aplicado ao atributo <a> dentro dos elementos de classe "idea" */
+.idea a {
+    font-size: 12px; /* Tamanho 12 do texto */
+}
+
+/* MODAL */
+/* Estilo aplicado ao id "modal" que é um box que ocupa toda a tela */
+#modal {
+    background: #FF5E84; /* Define a cor de fundo para rosa */
+
+    position: fixed; 
+    top: 0; /* Local onde o elemento começa */
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex; /* Todos os elementos filhos serão alinhados lado a lado */
+    justify-content: center; /* Alinha o conteudo ao centro */
+    
+    transition: 500ms; /* Define a transição do elemento para 500 milisegundos */
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+
+/* Estilo aplicado ao div de classe "content" */
+#modal .content {
+    color: #FFF; /* Cor branco dos textos */
+    margin-top: 2%;
+}
+
+/* Estilo aplicado ao atributo <h1> dentro da classe "content"*/
+#modal .content h1 {
+    text-align: center; /* Alinhamento do texto ao centro */
+    text-transform: uppercase; /*Transformado o texto em letra maiscula */
+    margin-top: 0;
+}
+
+/* Estilo aplicado ao atributo formulário */
+#modal form {
+    width: 80%; /* Tamanho flexivel em tela */
+    max-width: 700px; /* Tamanho fixo em tela */
+    margin: 0 auto 5%; /*Margem superior e inferior de 0 e auto nas laterais */
+
+    display: grid; /* Elementos filhos em grid */
+    grid-template-columns: 1fr 1fr; /* Define a quantidade de 2 colunas no grid */
+
+    gap: 15px; /* Espaço entre linhas e colunas de um grid */
+}
+
+.content form div:nth-child(3), /* Seleciona o filho do elemento n 3 */
+.content form div:nth-child(4), /* Seleciona o filho do elemento n 4 */
+.content form div:nth-child(5){ /* Seleciona o filho do elemento n 5 */
+    grid-column: span 2; /* Faz com que o elemento ocupe duas colunas */
+}
+
+/* Estilo aplicado aos componentes de formulario input e textarea */
+form input, textarea {
+    width: 100%; /* Largura */
+    padding: 8px; /* Espaco interno */
+    box-sizing: border-box; /* Deixa o elemento com tamanho fix independente de padding e borda */
+
+    border-radius: 6px; /* Arredondamento dos cantos do elemento */
+    border: 0px solid rgb(151, 10, 43, 0.5); /* Tipo da borda*/
+
+    outline: none; /* Removido a borda de seleção dos elementos*/
+
+    font-size: 14px; /* Tamanho do texto interno */
+    margin-bottom: 5px; /* Margem de baixo */
+}
+
+/* Estilo aplicado ao atributo <label> */
+form label {
+    font-size: 14px; /* Tamanho do texto */
+    font-weight: 600; /* Peso da fonte */
+    line-height: 26px; /* Espaço entre linhas */
+    letter-spacing: 0.8px; /* Espaço entre letras */
+}
+
+/* Estilo aplicado ao atriuto <a> dentro do fomulario */
+form a {
+    width: 145px; /* Largura do elemento */
+    height: 35px; /* Altura do elemento */
+
+    background-color: #ffffff22; /* cor de fundo com apacidade */
+    color: white; /* Cor branco do texto*/
+
+    display: flex; /* Display flex para ganhar os atributos de alinhamento */
+    align-items: center; /* Alinha os itens ao centro */
+    justify-content: center; /* Alinha os itens ao centro */
+
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+
+    border-radius: 6px; /* Arredondamento das bordas */
+
+    align-self: end; /* Alinhamento do elemento de cima para baixo */
+
+    transition: 400ms; /* Tempo de transição */
+}
+
+/* Estilo aplicado ao atributo <a> dentro de form quando é passado o mouse em cima */
+form a:hover {
+    background: #fff; /* Cor branco de fundo */
+    color: #FF5E84; /* Cor rosa do texto */
+
+    text-decoration: none; /* remover o underline */
+}
+
+/* Estilo aplicado ao atributo <button> dentro de form */
+form button {
+    background: #FFF; /* Cor branco de fundo */
+    color: #FF5E84; /* Cor rosa do texto */
+
+    width: 145px; /* Altura de 145px do elemento */
+    height: 35px; /* Largura de 35 px do elemento */
+
+    border-radius: 6px; /* Arredondamento dos cantos do elemento */
+
+    grid-column: 2; /* Coloca o elemento na segunda coluna do grid */
+    justify-self: end; /* Alinha o elemento no final do espaço */
+
+    transition: 400ms; /* Define uma transissão de 400 milisegundos */
+}
+
+/* Estilo aplicado ao atributo <button> dentro de form quando é passado o mouse por cima */
+form button:hover {
+    background-color: #0984e3; /* Cor azul de fundo */
+    color: white; /* Cor branco do texto */
+
+    text-decoration: none; /* Remove o underline */
+}
+
+/* Estilo aplicado ao elemento com classe "hide" ativa */
+#modal.hide {
+    visibility: hidden; /* Deixa o elemento invisivel */
+}
+
+/* IDEIA.HTML */
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+
+    margin-right: 20px;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li a.button {
+    color: white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+    margin: 16px 0;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+    font-size: 14px;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#page-ideas main {
+    margin-top: 0;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
