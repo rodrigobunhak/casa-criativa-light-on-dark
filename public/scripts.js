@@ -89,4 +89,7 @@ const changeTheme = (colors, logo) => {
 
 checkbox.addEventListener("change", ({target}) => {
     target.checked ? changeTheme(darkMode, logoDark) : changeTheme(initialColors, logoLight)
+    console.log(html.style.cssText)
 })
+
+console.log(html.style.cssText)
