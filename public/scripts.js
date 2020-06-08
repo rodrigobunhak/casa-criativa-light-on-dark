@@ -72,18 +72,21 @@ const darkMode = {
     colorTextButton: "#FFFFFF"
 }
 
+const logoDark = "img/logo-dark.svg"
+
+const logoLight = "img/logo-light.svg"
 
 const transformKey = key =>
     "--" + key.replace(/([A-Z])/g, "-$1").toLowerCase()
 
-const changeTheme = (colors) => {
+const changeTheme = (colors, logo) => {
     
     Object.keys(colors).map(key =>
         html.style.setProperty(transformKey(key), colors[key] ))
 
-    img.setAttribute("src", "img/logo.svg")
+    img.setAttribute("src", logo)
 }
 
 checkbox.addEventListener("change", ({target}) => {
-    target.checked ? changeTheme(darkMode) : changeTheme(initialColors)
+    target.checked ? changeTheme(darkMode, logoDark) : changeTheme(initialColors, logoLight)
 })
