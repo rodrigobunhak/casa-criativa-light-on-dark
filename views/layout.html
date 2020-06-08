@@ -10,14 +10,22 @@
 </head>
 
 <body id="{{ bodyId }}">
+
+    <div class="toggle">
+        <input id="switch" type="checkbox" name="theme">
+        <label for="switch">Toggle</label>
+    </div>
+
     <div id="container">
-        
+
     {% block content %}
     {% endblock %}
+
 
     </div>
 
     {% include "modal.html" %}
+
     
     <script src="scripts.js"></script>
 </body>

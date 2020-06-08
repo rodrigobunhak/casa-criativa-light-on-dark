@@ -38,3 +38,52 @@ function checkFields(event) {
         console.log(event.target[value].value)
     }
 }
+
+// altera thema
+const html = document.querySelector("html")
+const checkbox = document.querySelector("input[name=theme]")
+const img = document.querySelector("img[name=logo]")
+
+
+const getStyle = (element, style) =>
+    window
+        .getComputedStyle(element)
+        .getPropertyValue(style)
+
+const initialColors = {
+    colorBg: getStyle(html, "--color-bg"),
+    colorPanel: getStyle(html, "--color-panel"),
+    colorHighlight: getStyle(html, "--color-highlight"),
+    colorHighlightStrong: getStyle(html, "--color-highlight-strong"),
+    colorTitle: getStyle(html, "--color-title"),
+    colorText: getStyle(html, "--color-text"),
+    colorTextPanel: getStyle(html, "--color-text-panel"),
+    colorTextButton: getStyle(html, "--color-text-button")
+}
+
+const darkMode = {
+    colorBg: "#25282b", // preto
+    colorPanel: "#393c3f", // rosa escuro
+    colorHighlight: "#ee2957", // rosa escuro
+    colorHighlightStrong: "#FFFFFF",
+    colorTitle: "#FFFFFF", // preto
+    colorText: "#b5b5b5",
+    colorTextPanel: "#b5b5b5",
+    colorTextButton: "#FFFFFF"
+}
+
+
+const transformKey = key =>
+    "--" + key.replace(/([A-Z])/g, "-$1").toLowerCase()
+
+const changeTheme = (colors) => {
+    
+    Object.keys(colors).map(key =>
+        html.style.setProperty(transformKey(key), colors[key] ))
+
+    img.setAttribute("src", "img/logo.svg")
+}
+
+checkbox.addEventListener("change", ({target}) => {
+    target.checked ? changeTheme(darkMode) : changeTheme(initialColors)
+})

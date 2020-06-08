@@ -1,8 +1,26 @@
 /* Estilo aplicado na página inteira através do atributo <body> */
 /* ESTILOS GLOBAIS */
+html {
+    --color-bg: #e6e5e5;
+    --color-panel: #ffffff;
+    --color-highlight: #ee2957;
+    --color-highlight-strong: #b11c3f;
+    --color-title: #000000;
+    --color-text: #25282b;
+    --color-text-panel: #25282b; 
+    --color-text-button: #ffffff;
+
+
+    /* --color-text-panel: #393c3f;  */
+
+    /*
+    --cinza-escuro: #25282b;
+    --rosa-escuro: #db1d49; */
+}
+
 body {
-    background: #e6e5e5; /* Cor de fundo */
-    color: #25282b; /* Cor do texto */
+    background: var(--color-bg); /* Cor de fundo */
+    color: var(--color-text); /* Cor do texto */
     font-family: 'Montserrat', sans-serif; /* Fonte dos textos */
     margin: 0; /* Removido a margem dos 4 cantos da tela */
 }
@@ -12,8 +30,8 @@ body.hideScroll {
 }
 
 .button  {
-    background: #FF5E84; /* Background rosa de fundo */
-    color: white; /* Cor branca do texto */
+    background: var(--color-highlight); /* Background rosa de fundo */
+    color: var(--color-text-button); /* Cor branca do texto */
     font-size: 14px;
 
     width: 140px; /*Largura do botão */
@@ -25,7 +43,7 @@ body.hideScroll {
 
     border-radius: 6px; /* Aredonda os cantos do elemento */
 
-    box-shadow: 0px 8px 16px #FF5E8440; /* Atribui uma sombra ao elemento */
+    /* box-shadow: 0px 8px 16px #FF5E8440;  */
 }
 
 .button:hover {
@@ -34,7 +52,7 @@ body.hideScroll {
 
 /* Estilo aplicados a todos os links através do atributo <a> */
 a {
-    color: #FF5E84; /* Cor do texto */ 
+    color: var(--color-highlight); /* Cor do texto */ 
     text-decoration: none; /* Removido o underline */
     font-weight: bold; /* adicionado peso a fonte */
 }
@@ -56,7 +74,7 @@ p {
     width: 80%; /* largura máxima proporcional a tela */
     max-width: 980px; /* largura máxima fixa */
 
-    margin: 40px auto; /* Margem superior e inferior 40px, margens latarais automáticas */
+    margin: 20px auto; /* Margem superior e inferior 40px, margens latarais automáticas */
     display: flex; /* Reponsável por fazer os elementos filhos alinharem lado a lado*/
 }
 
@@ -81,7 +99,7 @@ main {
 /* Estilo aplicado aos elementos do tipo <button> */
 button {
     background: none; /* Sem cor de fundo */
-    color: #FF5E84; /* Cor rosa do texto */
+    color: var(--color-highlight); /* Cor rosa do texto */
     border: none; /* Remover borda do elemento */
     cursor: pointer; /* Tipo do cursor ao passar pelo elemento */
     outline: none; /* Removido borda automatica ao clicar */
@@ -107,7 +125,7 @@ footer {
     font-weight: 400; /* Peso da fonte */
     line-height: 18px; /* Espaço entre as linhas */
     letter-spacing: 0.2px; /* Espaço entre as letras */
-    color: #777; /* Cor do texto */
+    color: var(--color-text); /* Cor do texto */
 }
 
 /* Estilo aplicado ao atributo <a> dentro do rodapé */
@@ -121,7 +139,7 @@ da classe "idea" do atributo <div>
 .idea {
     display: flex; /* Alinha os atributos filhos em linha (imagem, div)*/
     
-    background-color: #FFF; /* cor branco de fundo */
+    background-color: var(--color-panel); /* cor branco de fundo */
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1) ; /* Sombra do elemento */
     border-radius: 8px; /* Arredondamento dos cantos do elemento */
 
@@ -141,18 +159,21 @@ da classe "idea" do atributo <div>
 /* Estilo aplicado ao atributo <a3> dentro dos elementos de classe "idea" */
 .idea h3 {
     margin: 0; /* Removido a margem por que por padrão o atributo trás uma margem Top*/
+    color: var(--color-title);
 }
 
 /* Estilo aplicado ao atributo <p> dentro dos elementos de classe "idea" */
 .idea p {
     margin: 4px 0; /* Ajustado margem do elemento 4px superior e inferir e 0 para laterais */
-    color: #777; /* Cor cinza do texto */
+    color: var(--color-highlight); 
+    font-weight: bold;
 }
 
 /* Estilo aplicado ao atributo de classe "description" dentro dos elementos de classe "idea" */
 .idea .description {
     margin: 8px 0; /* Margem suerior e inferior de 8px e 0 para laterais */
 
+    color: var(--color-text-panel); 
     font-size: 12px; /* Tamanho da fonte */
     line-height: 16px; /* Espaço entre as linhas */
     letter-spacing: 0.1px; /* Espaço entre as letras */
@@ -166,7 +187,7 @@ da classe "idea" do atributo <div>
 /* MODAL */
 /* Estilo aplicado ao id "modal" que é um box que ocupa toda a tela */
 #modal {
-    background: #FF5E84; /* Define a cor de fundo para rosa */
+    background: var(--color-highlight); /* Define a cor de fundo para rosa */
 
     position: fixed; 
     top: 0; /* Local onde o elemento começa */
@@ -187,7 +208,7 @@ da classe "idea" do atributo <div>
 
 /* Estilo aplicado ao div de classe "content" */
 #modal .content {
-    color: #FFF; /* Cor branco dos textos */
+    color: var(--color-text-button); /* Cor branco dos textos */
     margin-top: 2%;
 }
 
@@ -223,7 +244,8 @@ form input, textarea {
     box-sizing: border-box; /* Deixa o elemento com tamanho fix independente de padding e borda */
 
     border-radius: 6px; /* Arredondamento dos cantos do elemento */
-    border: 0px solid rgb(151, 10, 43, 0.5); /* Tipo da borda*/
+    /* border: 0px solid rgb(151, 10, 43, 0.5);  */
+    border: none;
 
     outline: none; /* Removido a borda de seleção dos elementos*/
 
@@ -244,8 +266,8 @@ form a {
     width: 145px; /* Largura do elemento */
     height: 35px; /* Altura do elemento */
 
-    background-color: #ffffff22; /* cor de fundo com apacidade */
-    color: white; /* Cor branco do texto*/
+    background-color: var(--color-highlight-strong); /* cor de fundo com apacidade */
+    color: var(--color-text-button); /* Cor branco do texto*/
 
     display: flex; /* Display flex para ganhar os atributos de alinhamento */
     align-items: center; /* Alinha os itens ao centro */
@@ -263,16 +285,16 @@ form a {
 
 /* Estilo aplicado ao atributo <a> dentro de form quando é passado o mouse em cima */
 form a:hover {
-    background: #fff; /* Cor branco de fundo */
-    color: #FF5E84; /* Cor rosa do texto */
+    background: var(--color-panel); /* Cor branco de fundo */
+    color: var(--color-highlight); /* Cor rosa do texto */
 
     text-decoration: none; /* remover o underline */
 }
 
 /* Estilo aplicado ao atributo <button> dentro de form */
 form button {
-    background: #FFF; /* Cor branco de fundo */
-    color: #FF5E84; /* Cor rosa do texto */
+    background: var(--color-text-button); /* Cor branco de fundo */
+    color: var(--color-highlight); /* Cor rosa do texto */
 
     width: 145px; /* Altura de 145px do elemento */
     height: 35px; /* Largura de 35 px do elemento */
@@ -287,8 +309,8 @@ form button {
 
 /* Estilo aplicado ao atributo <button> dentro de form quando é passado o mouse por cima */
 form button:hover {
-    background-color: #0984e3; /* Cor azul de fundo */
-    color: white; /* Cor branco do texto */
+    background-color: var(--color-highlight-strong);
+    color: var(--color-text-button); /* Cor branco do texto*/
 
     text-decoration: none; /* Remove o underline */
 }
@@ -320,11 +342,18 @@ form button:hover {
 }
 
 #page-ideas nav li a {
-    color: #25282b;
+    color: var(--color-highlight); /* Cor do texto */ 
+    text-decoration: none; /* Removido o underline */
+    font-weight: bold; /* adicionado peso a fonte */
+}
+
+#page-ideas nav li a:hover {
+    text-decoration: underline;
 }
 
 #page-ideas nav li a.button {
-    color: white;
+    color: var(--color-text-button);
+    text-decoration: none;
 }
 
 #page-ideas nav li:last-child {
